@@ -1,4 +1,3 @@
-use core::num;
 use std::collections::HashMap;
 
 pub fn exec(input: String) -> () {
