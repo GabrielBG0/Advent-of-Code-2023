@@ -1,5 +1,3 @@
-mod d11;
-mod d12;
 mod d21;
 use std::fs;
 
