@@ -1,9 +1,10 @@
 mod d21;
+mod d22;
 use std::fs;
 
 fn main() {
     let input =
-        fs::read_to_string("./input/test.txt").expect("Should have been able to read the file");
+        fs::read_to_string("./input/d2.txt").expect("Should have been able to read the file");
 
-    d21::exec(input);
+    d22::exec(input);
 }

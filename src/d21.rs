@@ -11,7 +11,7 @@ pub fn exec(input: String) -> () {
 
     for line in input.lines() {
         let game = line.split(":").collect::<Vec<&str>>();
-        let handfulls = game[1].split(",").collect::<Vec<&str>>();
+        let handfulls = game[1].split(";").collect::<Vec<&str>>();
         let mut found = false;
         for (key, value) in &colors {
             for handfull in &handfulls {
@@ -19,14 +19,12 @@ pub fn exec(input: String) -> () {
                 for ball in &bals {
                     if ball.contains(key) {
                         let info = ball.split(" ").collect::<Vec<&str>>();
-                        println!("{} {} {}", game[0], info[1], value.clone());
                         if info[1].parse::<i32>().unwrap() > value.clone() {
                             found = true;
                             break;
                         }
                     }
                 }
-                println!("{} {} {}", game[0], handfull, found);
                 if found {
                     break;
                 }
